@@ -8,7 +8,6 @@ import { Nav } from "../components/Nav";
 export const UpcomingGamesPage = () => {
   const location = useLocation();
   const gamePath = location.pathname.split("/")[3];
-  console.log(gamePath);
   const { upcomingGames, searched } = useSelector((state) => state.games);
   const isLoading = useSelector((state) => state.isLoading);
   const error = useSelector((state) => state.error);

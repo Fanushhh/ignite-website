@@ -1,5 +1,7 @@
-const baseURL = `https://api.rawg.io/api/games?key=${process.env.REACT_APP_API_KEY}`;
-console.log(baseURL);
+const baseURL = `https://api.rawg.io/api/games?key=${
+  import.meta.env.VITE_APP_API_KEY
+}`;
+
 const getCurrentMonth = () => {
   const month = new Date().getMonth() + 1;
   if (month < 10) {
