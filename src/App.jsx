@@ -1,7 +1,11 @@
+import { Nav } from "./components/Nav";
+import { Home } from "./pages/Home";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello there, general Kenobi</h1>
+    <div>
+      <Nav />
+      <Home />
     </div>
   );
 }
