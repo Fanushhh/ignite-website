@@ -1,6 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchGameDetails } from "../app/reducers/gameDetailsReducer";
+
 import { smallImage } from "../util";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -8,10 +7,9 @@ import { useLocation } from "react-router-dom";
 export const Game = ({ name, released, image, slug, id }) => {
   const stringPathId = id.toString();
   const params = useLocation();
-  const dispatch = useDispatch();
+
   const handleClick = () => {
     document.body.style.overflow = "hidden";
-    dispatch(fetchGameDetails(id));
   };
 
   return (

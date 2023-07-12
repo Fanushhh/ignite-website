@@ -7,10 +7,6 @@ import { GameDetail } from "../components/GameDetail";
 import { AnimatePresence, LayoutGroup } from "framer-motion";
 
 export const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAllGames());
-  }, []);
   const location = useLocation();
   const gamePath = location.pathname.split("/")[2];
   const { popular, searched } = useSelector((state) => state.games);
